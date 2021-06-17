@@ -18,23 +18,7 @@ def recommend():
     print(list(result))
     result_dict = {'Recommended': list(result)}
     #return jsonify(result_dict)
-    return render_template_string('''
-    <table>
-            <tr>
-                <td> Title </td> 
-            </tr>
-
-    {% for title in result.items() %}
-
-            <tr>
-                <td>{{ title }}</td> 
-            </tr>
-
-    {% endfor %}
-
-
-    </table>
-''', result=result)
+    return render_template('data.html', result=result)
 
 @app.route("/",methods=['GET'])
 def default():
@@ -42,5 +26,6 @@ def default():
 
 
 if __name__ == "__main__":
-    app.run() 
+    app.config["TEMPLATES_AUTO_RELOAD"] = True;
+    app.run(debug=False)
 
