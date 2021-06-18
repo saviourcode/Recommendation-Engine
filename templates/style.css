@@ -1,0 +1,192 @@
+.overlay {
+ background: url(https://wallpapercave.com/wp/wp4892354.jpg) center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+  filter: blur(2px);
+}
+
+.search-bar img {
+  width:1.5rem;
+  position:relative;
+  top: 0.5rem;
+
+}
+
+footer p {
+  text-align:center;
+  font-family:arial;
+  font-size:0.7rem;
+}
+
+.search-bar {
+  max-width:650px;
+  margin: 0 auto;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    font-size: 20px;
+    color: gray;
+}
+
+.search-bar input:hover{
+  box-shadow: 0 1px 5px rgba(138, 138, 138, 0.8);
+  border-radius: 20px;
+}
+
+.search-bar a {
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  font-family:arial;
+  color:black;
+  margin-top:1rem;
+}
+
+.search-bar a:hover {
+  font-weight:bold;
+}
+
+.search-bar input {
+  width: 100%; 
+  height:40px;
+  border-radius: 20px;
+  padding: 12px 40px; 
+  margin: 8px 0; 
+  display: inline-block; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box; 
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+footer {
+  position:fixed;
+  bottom: 0px;
+  width:100%;
+}
+
+main {
+  margin-top:8rem;
+}
+
+footer ul li  {
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0px 1px #888888;
+  cursor:pointer;
+}
+
+footer ul li:hover {
+  font-weight:bold;
+}
+
+#menuBtn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 35px;
+  top: 17px;
+  z-index: 9999 !important;
+  cursor: pointer;
+  opacity: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 195, 255, 0.733);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#hamburger{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  margin: 2px;
+}
+
+#sideNav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: #606060;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 90px;
+}
+
+#main {
+  transition: transform 1s;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px 0px;
+  display: block;
+  opacity: 0.8;
+}
+nav ul li a {
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family:sans-serif;
+  color: #fff;
+  display: inline-block;
+  transition: 1.3s;
+  white-space: nowrap;
+  position: relative;
+}
+/* nav ul li a:hover {
+  color: rgb(37, 37, 37);
+  text-decoration:none;
+  transition: 0.7s all;
+  background-image: linear-gradient(-90deg,#d5f0ff,#e2ebff);
+} */
+
+nav ul li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-height: 450px) {
+  #sideNav {padding-top: 90px;}
+  #sideNav a {font-size: 18px;}
+}
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+
