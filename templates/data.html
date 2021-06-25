@@ -1,15 +1,85 @@
-<table>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Open Graph API-->
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/19638418?v=4" />
+    <meta property="og:description" content="Movie/TV Recommendation Engine by Dhruv Tuteja" />
+    <meta property="og:title" content="Movie Recommendation Engine" />
+
+    <!--Favourite Icon (Favicon)-->
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/19638418?v=4">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <!-- styles -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- SmoothScroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+    <table class="movie-data">
+        <thead>
             <tr>
-                <td> Title </td> 
+                <th>
+                    <h1></h1>
+                </th>
+                <th>
+                    <h1>Title</h1>
+                </th>
             </tr>
-
-    {% for title in result.items() %}
-
+        </thead>
+        <tbody>
+            {% for i in result['title'].items() %}
             <tr>
-                <td>{{ title }}</td> 
+                <!-- <td><img src="https://image.tmdb.org/t/p/w500/"
+                        style="width:100px;" /></td> -->
+                <td>
+                    <img src = "https://image.tmdb.org/t/p/original/{{result['img'][i[0]]}}" style="width:100px;"\>
+                    
+                </td>
+                <td>{{ i[1].upper() }}</td>
             </tr>
-
-    {% endfor %}
-
-
+            {% endfor %}
+        </tbody>
     </table>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

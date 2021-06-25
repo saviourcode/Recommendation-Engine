@@ -1,17 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
-
-
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import linear_kernel
 import pickle
 from sklearn.impute import SimpleImputer
 
-
-# In[17]:
 
 
 # Reading dataframe
@@ -87,18 +82,13 @@ class Recommender:
 
             movie_indices = [i[0] for i in sim_scores]
 
-            return df.iloc[movie_indices]['title'].str.upper()
+            return df.iloc[movie_indices]
         except:
             return 'Movie/ TV Series not found. Please enter a different title.'
 
 
-# In[18]:
-
 
 movie = Recommender()
-
-
-# In[23]:
 
 
 # Serializing
@@ -106,7 +96,6 @@ with open('movie.pkl', 'wb') as handle:
     pickle.dump(movie, handle, pickle.HIGHEST_PROTOCOL)
 
 
-# In[ ]:
 
 
 
