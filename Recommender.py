@@ -19,16 +19,16 @@ from App import Recommender
 
 
 class RecommenderDS():
-    
+
     def __init__(self):
         pass
-    
+
     def deserialize(self):
         # Deserializing
         with open('movie.pkl', 'rb') as handle:
             model = pickle.load(handle)
         return model
-    
+
     def recommendation(self, title):
         model = self.deserialize()
         return model.get_recommendation(title)
@@ -37,17 +37,12 @@ class RecommenderDS():
 # In[ ]:
 
 
-
-
-
 # In[ ]:
 
 
-
-
-
 # In[ ]:
+a = 2
+if (a == 2):
+print("hello")
 
-
-
-
+print(ok)
