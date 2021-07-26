@@ -37,7 +37,7 @@ class Recommender:
 
             movie_indices = [i[0] for i in sim_scores]
 
-            return df.iloc[movie_indices]['title'].str.upper()
+            return df.iloc[movie_indices]
         except:
             return 'Movie/ Tv Show not found. Please try again.'
 
